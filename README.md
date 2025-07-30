@@ -184,17 +184,17 @@ click >> [video output](output/output_20250730095049.mp4)
 |:---:|:---:|
 | Accurate license plate recognition | License plate city identification (Iranian plate) |
 
-| ![o5](https://github.com/RezaGooner/Multi-Task-Iranian-Vehicle-Monitoring-System/blob/b17f628e50095d26d2560294e20ad9a6017a385d/output/output_20250730141531.jpg) |  |
-|:---:|:---:|
-| Another example of license plate reading |  |
+| ![o5](https://github.com/RezaGooner/Multi-Task-Iranian-Vehicle-Monitoring-System/blob/b17f628e50095d26d2560294e20ad9a6017a385d/output/output_20250730141531.jpg) | 
+|:---:|
+| Another example of license plate reading |  
 
 ---
 
 ### Example output for detection of traffic accidents
 
-| ![o6](https://github.com/RezaGooner/Multi-Task-Iranian-Vehicle-Monitoring-System/blob/376c4a0cb2dd9693eda4a203870f2eb9de70a6e5/output/output_20250730143116.jpg) |  |
-|:---:|:---:|
-| Accident detection in real-time traffic footage | |
+| ![o6](https://github.com/RezaGooner/Multi-Task-Iranian-Vehicle-Monitoring-System/blob/376c4a0cb2dd9693eda4a203870f2eb9de70a6e5/output/output_20250730143116.jpg) |
+|:---:|
+| Accident detection in real-time traffic footage |
 
 ---
 
