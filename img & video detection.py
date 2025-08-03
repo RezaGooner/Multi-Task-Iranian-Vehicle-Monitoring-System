@@ -26,7 +26,7 @@ PATHS = {
     "accident_model":  "weights/accident_model.pt",
     "city_plateinfo":  "Plates/city_plateinfo.txt",
     "alert_sound":     "sound/beep.mp3",
-    "source":          "a.jpg",   
+    "source":          "e.jpg",   
     "output":          "output",
 }
 
@@ -127,13 +127,23 @@ accident_model_weight = YOLO(PATHS["accident_model"])
 # ================== UTILITIES =====================
 
 def predict_car(car_img):
-    car_pil = Image.fromarray(cv2.cvtColor(car_img, cv2.COLOR_BGR2RGB))
-    car_tensor = car_transform(car_pil).unsqueeze(0).to(device)
-    with torch.no_grad():
-        pred = car_model(car_tensor)
-        pred_class = pred.argmax(1).item()
-        prob = torch.softmax(pred, dim=1)[0, pred_class].item()
-        return car_classes[pred_class], prob
+    try:
+        car_pil = Image.fromarray(cv2.cvtColor(car_img, cv2.COLOR_BGR2RGB))        
+        car_tensor = car_transform(car_pil).unsqueeze(0).to(device)
+
+        with torch.no_grad():
+            pred = car_model(car_tensor)
+            pred_softmax = torch.softmax(pred, dim=1)
+            
+            pred_class = pred.argmax(1).item()
+            prob = pred_softmax[0, pred_class].item()
+            
+
+            return car_classes[pred_class], prob
+
+    except Exception as e:
+        print("ERROR in predict_car:", str(e))
+        return "UNKNOWN", 0.0
 
 def predict_color(car_img):
     color_pil = Image.fromarray(cv2.cvtColor(car_img, cv2.COLOR_BGR2RGB))
