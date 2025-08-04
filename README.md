@@ -217,14 +217,15 @@ python Live.py
 .
 ├── Live.py
 ├── img & video detection.py
-├── Fine-tune.ipynb
-├── weights/               # Model checkpoint files (6 files)
+├── Fine-tune/
+│   └── car name model.ipynb
+├── weights/                   # Model checkpoint files (6 files)
 ├── Plates/
 │   └── city_plateinfo.txt
 ├── sound/
 │   └── beep.mp3
-├── INPUT.JPG / input.mp4  # Example inputs
-├── output/                # Auto-created outputs
+├── INPUT.JPG / input.mp4      # Example inputs
+├── output/                    # Auto-created outputs
 └── README.md
 ```
 
